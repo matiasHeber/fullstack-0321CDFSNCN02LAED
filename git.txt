@@ -1,0 +1,34 @@
+Para crearlo
+
+git init
+
+
+-> Como chequear el estado del repositorio?
+
+git status
+
+
+->Como agregar cambios? 
+
+git add .
+(agrega TODOS los cambios)
+
+->Para preparar esos cambios
+
+git commit -m 'Mensaje a eleccion'
+
+-> Para subir los cambios al repositorio remoto
+
+git push origin master
+o 
+git push origin main
+
+
+-> configurar el repositorio remoto
+
+git add origin URldelRepositorio
+
+
+-> Si hay cambios en el repositorio remoto los traigo con:
+
+git pull origin master
