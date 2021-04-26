@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.main {
+    max-width: 1200px;
+}
+
+.container {
+    height: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.caja-1, .caja-2, .caja-3 {
+    width: 300px;
+    height: 200px;
+    border: 1px solid;
+}
+.caja-2 {
+    align-self: flex-start;
+}
