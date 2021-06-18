@@ -99,7 +99,7 @@ const cols = {
 ```
 
 ### Por último vamos a definir el model
-- El orden de los parametros tiene es obligatorio
+- El orden de los parametros es obligatorio
 ```
     const Usuario = sequelize.define(alias, cols, config);
     return Usuario;
