@@ -3,7 +3,16 @@
 
 
 ### Uno a uno
+```
+Movies.associate = function (models) {
+        
+    Movies.hasMany(models.Genres, {
+        as: 'genre',
+        foreignKey: 'genre_id'
+    });
 
+}
+```
 ### Uno a muchos
 - Del lado de genres
 ```

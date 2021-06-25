@@ -5,7 +5,7 @@ const Op = db.Sequelize.Op;
 module.exports = {
     all: (req, res) => {
         db.Movies.findAll({
-            include: ['genre']
+            include: {all:true}
         })
             .then(movies => res.send(movies))
             .catch(e => res.send(e))
