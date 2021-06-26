@@ -3,12 +3,15 @@ const Op = db.Sequelize.Op;
 
 
 module.exports = {
-    all: (req, res) => {
-        db.Movies.findAll({
-            include: {all:true}
-        })
-            .then(movies => res.send(movies))
-            .catch(e => res.send(e))
+    all: async function (req, res) {
+        let movies;
+        try {
+            movies = await db.Movies.findAll();
+        } catch (e) {
+            return res.send(e)
+        }
+        
+        res.send(movies);
     },
     create: (req, res) => {
         res.render('moviesAdd');
