@@ -12,7 +12,7 @@ const API = 'http://www.omdbapi.com/?apikey=d4e35e92';
 
 const moviesController = {
     list: (req, res) => {
-        fetch('http://localhost:3000/api/movies')
+        fetch('http://localhost:3001/api/movies')
             .then(response => response.json())
             .then(data => {
                 return res.send(data);
@@ -20,6 +20,14 @@ const moviesController = {
             .catch(e => {
                 return res.send(e);
             })
+        
+        // Lo que ya venía por defecto en el proyeto base 
+        // Movies.findAll({
+        //     include: ['genre']
+        // })
+        //     .then(movies => {
+        //         res.render('moviesList.ejs', {movies})
+        //     })
     },
     'detail': (req, res) => {
         db.Movie.findByPk(req.params.id,
@@ -57,7 +65,30 @@ const moviesController = {
     },
     //Aqui debo modificar para crear la funcionalidad requerida
     'buscar': (req, res) => {
-        //req.query.busqueda
+        let filter = {
+            where: {
+                title: {[db.Sequelize.Op.like]: `%${req.body.titulo}%`}
+            }
+        };
+        Movies.findAll(filter)
+            .then(response => {
+                if (response.length != 0) {
+                    return res.send(response);
+                } else {
+                    console.log(`${API}&s=${req.body.titulo}`);
+                    fetch(`${API}&s=${req.body.titulo}`)
+                        .then(response => {
+                            return response.json();
+                        })
+                        .then(data => {
+                            return res.send(data.Search);
+                        })
+                        .catch(e => res.send(e))
+                }
+            })
+            .catch(e => {
+                console.log(e);
+            });
     },
     //Aqui dispongo las rutas para trabajar con el CRUD
     add: function (req, res) {
