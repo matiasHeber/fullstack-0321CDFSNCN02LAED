@@ -1,7 +1,5 @@
 const path = require('path');
 const db = require('../database/models');
-const sequelize = db.sequelize;
-const { Op } = require("sequelize");
 const moment = require('moment');
 const fetch = require('node-fetch');
 
@@ -13,11 +11,14 @@ const Actors = db.Actor;
 const API = 'http://www.omdbapi.com/?apikey=d4e35e92';
 
 const moviesController = {
-    'list': (req, res) => {
-        fetch('localhost:3000/api/movies')
-            .then(res => res.json())
+    list: (req, res) => {
+        fetch('http://localhost:3000/api/movies')
+            .then(response => response.json())
             .then(data => {
                 return res.send(data);
+            })
+            .catch(e => {
+                return res.send(e);
             })
     },
     'detail': (req, res) => {
@@ -56,7 +57,7 @@ const moviesController = {
     },
     //Aqui debo modificar para crear la funcionalidad requerida
     'buscar': (req, res) => {
-        
+        //req.query.busqueda
     },
     //Aqui dispongo las rutas para trabajar con el CRUD
     add: function (req, res) {

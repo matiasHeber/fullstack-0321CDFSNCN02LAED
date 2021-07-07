@@ -16,7 +16,7 @@ module.exports = {
                 data: movies
             });
         }catch(e) {
-            return res.status(501).json(e);
+            return res.status(501);
         }
     },
     store: (req, res) => {
