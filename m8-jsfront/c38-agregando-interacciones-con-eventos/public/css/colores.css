@@ -1,0 +1,19 @@
+.colores{
+    display: flex;
+}
+.color{
+    width: 40px;
+    height: 40px;
+    border: solid 1px black;
+    margin-left: 20px;
+}
+
+#caja1 , #caja2, #caja3{
+    width: 300px;
+    height: 100px;
+    border: solid 1px black
+}
+#red{background-color: red;}
+#blue{background-color: blue;}
+#yellow{background-color: yellow;}
+#green{background-color: green;}
