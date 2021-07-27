@@ -1,0 +1,23 @@
+i,a {
+    color: #5F6368;
+}
+input {
+    border: none;
+    outline: none;
+    width: 100%;
+}
+form {
+    box-shadow: 2px 2px 5px #5F6368;
+    width: 100%;
+}
+#showpass {
+    color: grey;
+}
+span {
+    position: relative;
+    left: 185px;
+    bottom: 30px;
+}
+.hide {
+    display: none;
+}
