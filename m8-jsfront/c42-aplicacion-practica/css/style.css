@@ -13,10 +13,13 @@ form {
 #showpass {
     color: grey;
 }
-span {
+.passContainer {
     position: relative;
-    left: 185px;
-    bottom: 30px;
+}
+span {
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
 }
 .hide {
     display: none;
