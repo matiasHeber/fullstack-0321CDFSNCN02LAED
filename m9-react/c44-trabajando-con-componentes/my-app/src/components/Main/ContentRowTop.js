@@ -1,12 +1,22 @@
 import React from 'react';
 import Card from './Card';
 import Section from './Section';
+
 /* Assets */
-import imagenFondo from './img/mandalorian.jpg';
+import imagenFondo from './assets/img/mandalorian.jpg';
 
 
 function ContentRowTop(){
 	
+	const data = [
+		{
+			title: 'MOVIES IN DATA BASE',
+			total: 21,
+			color: 'primary',
+			icon: 'fa-film',
+		}
+	]
+
 	const styleImg = {
         width: 40 +'rem'
     }
