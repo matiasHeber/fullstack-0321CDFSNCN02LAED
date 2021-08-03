@@ -1,12 +1,14 @@
 import React, { Fragment } from 'react';
 import SideBar from './SideBar';
-import ContentWrapper from './ContentWrapper';
+import ContentWrapper from './Main';
 
 function App() {
   return (
     <Fragment>
+      
       <SideBar />
       <ContentWrapper />
+
     </Fragment>
   );
 }

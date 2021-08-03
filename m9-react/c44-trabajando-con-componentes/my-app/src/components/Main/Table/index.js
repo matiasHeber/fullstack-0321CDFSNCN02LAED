@@ -3,11 +3,11 @@ import React from 'react';
 const Table = () => {
     return (
         <>
-            <h1 class="h3 mb-2 text-gray-800">All the products in the Database</h1>
-			<div class="card shadow mb-4">
-				<div class="card-body">
-					<div class="table-responsive">
-						<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+            <h1 className="h3 mb-2 text-gray-800">All the products in the Database</h1>
+			<div className="card shadow mb-4">
+				<div className="card-body">
+					<div className="table-responsive">
+						<table className="table table-bordered" id="dataTable" width="100%">
 							<thead>
 								<tr>
 									<th>Name</th>
@@ -32,9 +32,9 @@ const Table = () => {
 									</td>
 									<td>
 										<ul>
-											<li><span class="text-danger">Red</span></li>
-											<li><span class="text-primary">Blue</span></li>
-											<li><span class="text-success">Green</span></li>
+											<li><span className="text-danger">Red</span></li>
+											<li><span className="text-primary">Blue</span></li>
+											<li><span className="text-success">Green</span></li>
 										</ul>
 									</td>
 									<td>245</td>
@@ -52,9 +52,9 @@ const Table = () => {
 									</td>
 									<td>
 										<ul>
-											<li><span class="text-danger">Red</span></li>
-											<li><span class="text-primary">Blue</span></li>
-											<li><span class="text-success">Green</span></li>
+											<li><span className="text-danger">Red</span></li>
+											<li><span className="text-primary">Blue</span></li>
+											<li><span className="text-success">Green</span></li>
 										</ul>
 									</td>
 									<td>245</td>
