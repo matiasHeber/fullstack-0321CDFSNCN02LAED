@@ -17,11 +17,13 @@ function ContentRowTop(){
 					<Switch>
 
 						<Route path="/metrics" component={ContentRowMovies} />
-
+						<Route path="/categories" component={ContentRowCenter} />
+						<Route path="/table" component={Chart} />
+						<Route path="*">
+							<h2>Error 404 NOT FOUND</h2>
+						</Route>
+						
 					</Switch>
-
-					{/* <ContentRowCenter />
-					<Chart /> */}
 	
 				</div>
 				{/*<!--End Content Row Top-->*/}
